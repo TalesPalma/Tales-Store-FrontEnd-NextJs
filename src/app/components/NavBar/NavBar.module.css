@@ -1,0 +1,41 @@
+.LinkContainer {
+  display: flex;
+  background-color: rgba(0, 73, 144);
+  width: 90%;
+  height: 50px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+    rgba(0, 73, 144, 0.5) 5px 10px 15px;
+  transition: all 0.5s;
+  margin: 10px;
+}
+
+.LinkContainer:hover {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.Link {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.Link:hover {
+  transform: translateY(-3px);
+}
+
+.Icon {
+  font-size: 20px;
+}
