@@ -8,9 +8,7 @@ export default function store() {
 
   return (
     <div className={styles.container}>
-      <Link href="/details">
-        {listProducts.map(product => <CardCart />)}
-      </Link>
-    </div>
+      {listProducts.map(product => <CardCart />)}
+    </div >
   )
 }

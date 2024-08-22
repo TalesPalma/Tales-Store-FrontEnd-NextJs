@@ -1,31 +1,23 @@
-import Link from "next/link";
 import { CardProduct } from "./components/CardProduct";
 import styles from "./page.module.css";
+import { getProductsFromApi } from "./services/api/products";
 
-
-// async function consumeApi(): Promise<ConsumeCardApi[]> {
-//   try {
-//     const response = await fetch("http://localhost:8080/personalidade", { cache: "no-store" })
-//
-//     if (!response.ok) {
-//       throw new Error("Failed to fetch data")
-//     }
-//     const data: ConsumeCardApi[] = await response.json()
-//     return data
-//   } catch (error) {
-//     console.log(error)
-//   }
-//   return []
-// }
 
 export default async function Home() {
-  // const data = await consumeApi()
-  // console.log("Testando", data)
+  const products = await getProductsFromApi()
   return (
     <main className={styles.main}>
-      <Link href="/details" className={styles.cardSection}>
-        <CardProduct />
-      </Link>
+      <h1 className={styles.title}>Welcome to TALE STORE</h1>
+      <div className={styles.cardSection}>
+        {products.map((product) =>
+          <CardProduct
+            key={product.id}
+            title={product.name}
+            price={product.price.toString()}
+            imageUrl={product.image_url}
+          />)}
+      </div>
+
     </main>
   );
 }

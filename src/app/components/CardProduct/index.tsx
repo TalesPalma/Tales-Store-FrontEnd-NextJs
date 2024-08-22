@@ -12,10 +12,10 @@ export const CardProduct = ({ title, price, imageUrl }: CardProductProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.image}>
-        <img src="https://via.placeholder.com/160" />
+        <img src={imageUrl} />
       </div>
-      <span className={styles.title}>title</span>
-      <span className={styles.price}>$100</span>
+      <span className={styles.title}>{title}</span>
+      <span className={styles.price}>{price}</span>
     </div>
   )
 }
