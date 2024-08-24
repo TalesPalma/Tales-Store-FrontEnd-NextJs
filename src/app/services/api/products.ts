@@ -8,7 +8,10 @@ export async function getProductsFromApi(): Promise<ProductInterface[]> {
     return data
   }
   else {
-    throw new Error(data.message)
+    return []
   }
 }
+
+
+
 

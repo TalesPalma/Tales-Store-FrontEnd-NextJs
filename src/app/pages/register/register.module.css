@@ -1,0 +1,16 @@
+.container {
+  padding: 2rem;
+}
+
+.container a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  text-decoration: none;
+  font-weight: 700;
+  background: rgba(59, 130, 246, 1);
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  display: inline-block;
+}
